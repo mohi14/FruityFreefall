@@ -5,7 +5,7 @@
             "name": "C++ Debug",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/build/LogicGateSimulator",
+            "program": "${workspaceFolder}/build/FruityFreefall",
             "args": [],
             "cwd": "${workspaceFolder}",
             "environment": [],

@@ -1,0 +1,126 @@
+| Task                                        | Status |
+| ------------------------------------------- | ------ |
+| Setup SFML environment                      | \[x]   |
+| Create window & basic rendering             | \[ ]   |
+| Implement player basket control             | \[ ]   |
+| Create FallingObject base class             | \[ ]   |
+| Create Fruit and Bomb classes               | \[ ]   |
+| Implement object pooling                    | \[ ]   |
+| Implement spawning logic                    | \[ ]   |
+| Implement falling animation                 | \[ ]   |
+| Detect collisions                           | \[ ]   |
+| Implement scoring system                    | \[ ]   |
+| Implement countdown timer                   | \[ ]   |
+| Display UI (score, timer)                   | \[ ]   |
+| Progressive difficulty logic                | \[ ]   |
+| Implement game states (menu/play/game over) | \[ ]   |
+| Add audio (music & SFX)                     | \[ ]   |
+| Bomb warning effect                         | \[ ]   |
+| Game over & restart functionality           | \[ ]   |
+| Particle effects (optional)                 | \[ ]   |
+| Power-ups (optional)                        | \[ ]   |
+| High-score save/load (optional)             | \[ ]   |
+| Level progression (optional)                | \[ ]   |
+| Final testing & polishing                   | \[ ]   |
+
+
+Step 2: Plan Your Code Structure
+Create a modular structure for maintainability:
+
+Main.cpp – entry point, game loop, and state management.
+
+GameManager – manages game states (Menu, Playing, Game Over), timing, difficulty.
+
+Player – basket/character control, rendering, collision bounding box.
+
+FallingObject (base class) – properties common to fruits and bombs.
+
+Fruit and Bomb (derived classes) – specifics of behavior and scoring.
+
+ObjectPool – for spawning and reusing fruits/bombs efficiently.
+
+UI – for score, timer, and messages.
+
+AudioManager – handle music and sound effects.
+
+ResourceManager (optional) – load and manage textures/sounds.
+
+Step 3: Basic Window & Input
+Create SFML window.
+
+Implement player basket movement using keyboard arrows.
+
+Render player sprite at bottom of the screen.
+
+Test input responsiveness and rendering.
+
+Step 4: Falling Objects & Spawning Logic
+Create Fruit and Bomb classes inheriting from FallingObject.
+
+Implement object pooling for fruits and bombs.
+
+Spawn fruits (70%) and bombs (30%) randomly at top with random X.
+
+Make fruits and bombs fall smoothly, update their positions each frame.
+
+Step 5: Collision Detection
+Detect if player basket intersects with fruit or bomb.
+
+On fruit collision:
+
+Increase score by +10.
+
+Play catch sound.
+
+Remove the fruit (return to pool).
+
+On bomb collision:
+
+Deduct 5 points and 3 seconds from timer.
+
+Play explosion sound.
+
+Remove the bomb (return to pool).
+
+Step 6: Scoring & Timer System
+Implement a countdown timer starting at 60 seconds.
+
+Display score and timer on the screen.
+
+Deduct time on bomb hits.
+
+End game if time runs out or score < 0.
+
+Step 7: Progressive Difficulty
+Gradually increase falling speed over time.
+
+Possibly increase spawn rate.
+
+Test balance for smooth difficulty ramp.
+
+Step 8: Game States & UI
+Implement Menu, Playing, and Game Over screens.
+
+Add start, pause, and restart functionality.
+
+Show game over message with final score.
+
+Allow restarting the game.
+
+Step 9: Audio Integration
+Add background music (looping).
+
+Play sound effects for catching fruit, bomb explosions, game over.
+
+Control volume if desired.
+
+Step 10: Polish & Extras
+Add bomb warning effect (e.g., flashing before bomb falls).
+
+Add particle effects when catching fruit (optional).
+
+Implement power-ups (optional).
+
+Save/load high scores (optional).
+
+Add level progression (optional).

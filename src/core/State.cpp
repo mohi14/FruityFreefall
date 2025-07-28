@@ -8,7 +8,12 @@ State::~State(){
 }
 
 //Functions
-void State::endState(){
-
+void State::checkForQuit(){
+if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Escape)){
+    this->quit = true;
+}
+}
+const bool & State::getQuit() const {
+return this->quit;
 }
 

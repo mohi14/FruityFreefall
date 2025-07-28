@@ -1,7 +1,7 @@
 | Task                                        | Status |
 | ------------------------------------------- | ------ |
 | Setup SFML environment                      | \[x]   |
-| Create window & basic rendering             | \[ ]   |
+| Create window & basic rendering             | \[x]   |
 | Implement player basket control             | \[ ]   |
 | Create FallingObject base class             | \[ ]   |
 | Create Fruit and Bomb classes               | \[ ]   |
